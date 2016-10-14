@@ -1,14 +1,4 @@
-# React Official Tutorial with The React Way: Getting Started
-
-
-Refactored the [React.js official tutorial code]( https://facebook.github.io/react/docs/tutorial.html) with the [The React Way: Getting Started boilerplate]( https://github.com/RisingStack/react-way-getting-started) to use webpack and ES6.
-
-Modifications:
-
-* just keep the node.js server
-* simplified app.js
-* not using remarkable
-* use lowdb in server
+# Qi's React.js boilerplate
 
 ## How to start
 
