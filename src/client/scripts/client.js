@@ -1,7 +1,13 @@
-import App from '../../app';
+// Libs
+import React from 'react';
+import { render } from 'react-dom';
 
-var attachDOMElement = document.getElementById('app');
+// Components
+// import App from './components/App';
+import Hello from '../../app/Hello';
 
-var app = new App();
-
-app.renderToDOM(attachDOMElement);
+// Render
+render(
+  <Hello />,
+  document.getElementById('root')
+);
