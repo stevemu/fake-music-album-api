@@ -1,16 +1,5 @@
 import path from 'path';
 import express from 'express';
-var fs = require('fs');
-import low from 'lowdb';
-import fileAsync from 'lowdb/lib/file-async';
-
-// Init low db
-const db = low('db.json', {
-  storage: fileAsync
-});
-db.defaults({comments: []})
-  .value();
-const comments = db.get('comments');
 
 var bodyParser = require('body-parser');
 
@@ -40,25 +29,6 @@ app.use(function(req, res, next) {
     res.setHeader('Cache-Control', 'no-cache');
     next();
 });
-
-app.get('/api/comments', function(req, res) {
-  const commentsNow = comments.value();
-  res.json(commentsNow);
-});
-
-app.post('/api/comments', function(req, res) {
-  var newComment = {
-    id: Date.now(),
-    author: req.body.author,
-    text: req.body.text,
-  };
-  const comment = comments.push(newComment).last().value();
-  res.send(comment);
-
-});
-
-
-
 
 server = app.listen(process.env.PORT || 3000, () => {
   var port = server.address().port;
