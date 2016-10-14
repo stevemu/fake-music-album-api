@@ -1,5 +1,5 @@
-import React from 'react/addons';
-import CommentBox from './components/CommentBox';
+import React from 'react';
+import Hello from './components/Hello';
 
 /*
  * @class App
@@ -7,7 +7,7 @@ import CommentBox from './components/CommentBox';
 class App {
 
 	render(domElement) {
-		var reactElement = <CommentBox url="/api/comments"/>;
+		var reactElement = <Hello />;
 
 		// render to DOM
 		if (domElement) {
