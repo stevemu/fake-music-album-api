@@ -1,5 +1,11 @@
 # Qi's React.js boilerplate
 
+## Features
+
+* Node.js serve the index.html and bundled js
+* css is bundled with webpack too
+* webpack watches new changes and compile the new bundle.js on-the-fly
+
 ## How to start
 
 Run:  
