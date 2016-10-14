@@ -4,7 +4,7 @@ class Hello extends React.Component {
 
 	render() {
 		return (
-			<div className="commentBox">
+			<div>
 				<h1>Hello World</h1>
 			</div>
 		);

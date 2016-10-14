@@ -1,7 +1,7 @@
 {
-  "name": "react-way-getting-started",
+  "name": "qi-react-starter",
   "version": "1.0.0",
-  "description": "The React Way - Getting Started",
+  "description": "Qi React.js Starter",
   "main": "src/server/index.js",
   "scripts": {
     "test": "jest",
@@ -10,16 +10,8 @@
     "webpack": "webpack --config config/webpack.js",
     "webpack-watch": "webpack --config config/webpack.js --watch --colors"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/RisingStack/react-way-getting-started.git"
-  },
-  "author": "RisingStack, Peter Marton",
+  "author": "Mu, Qi",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/RisingStack/react-way-getting-started/issues"
-  },
-  "homepage": "https://github.com/RisingStack/react-way-getting-started",
   "dependencies": {
     "bluebird": "^3.4.1",
     "body-parser": "^1.15.2",
