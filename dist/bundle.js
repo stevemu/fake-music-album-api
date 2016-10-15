@@ -21807,8 +21807,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var Hello = (function (_React$Component) {
-		_inherits(Hello, _React$Component);
+	var Hello = (function (_Component) {
+		_inherits(Hello, _Component);
 
 		function Hello() {
 			_classCallCheck(this, Hello);
@@ -21825,14 +21825,14 @@
 					_react2['default'].createElement(
 						'h1',
 						null,
-						'Hello World'
+						'Hello World2'
 					)
 				);
 			}
 		}]);
 
 		return Hello;
-	})(_react2['default'].Component);
+	})(_react.Component);
 
 	exports['default'] = Hello;
 	module.exports = exports['default'];
