@@ -13,6 +13,7 @@
   "author": "Mu, Qi",
   "license": "MIT",
   "dependencies": {
+    "babel-loader": "^5.4.2",
     "body-parser": "^1.15.2",
     "express": "^4.12.3",
     "react": "^15.3.0",
@@ -25,6 +26,5 @@
     "webpack": "^1.8.4",
     "css-loader": "^0.23.1",
     "style-loader": "^0.13.1"
-
   }
 }

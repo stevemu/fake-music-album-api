@@ -21825,7 +21825,7 @@
 					_react2['default'].createElement(
 						'h1',
 						null,
-						'Hello World2'
+						'Hello World1'
 					)
 				);
 			}
