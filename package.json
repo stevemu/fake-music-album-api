@@ -4,26 +4,26 @@
   "description": "Qi React.js Starter",
   "main": "src/server/index.js",
   "scripts": {
-    "test": "jest",
     "start": "nodemon src/server/index.js",
-    "postinstall": "webpack --config config/webpack.js",
     "webpack": "webpack --config config/webpack.js",
-    "webpack-watch": "webpack --config config/webpack.js --watch --colors"
+    "watch": "webpack --config config/webpack.js --watch --colors"
   },
   "author": "Mu, Qi",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "express": "^4.12.3",
     "react": "^15.3.0",
     "react-dom": "^15.3.0"
   },
   "devDependencies": {
     "babel-core": "^6.11.4",
-    "webpack": "^1.8.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
     "css-loader": "^0.23.1",
-    "style-loader": "^0.13.1",
     "react-hot-loader": "^1.3.0",
-    "babel-loader": "^6.2.4"
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   }
 }
