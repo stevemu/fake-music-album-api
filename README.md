@@ -16,11 +16,11 @@ npm start
 
 Check your http://localhost:3000/ or  `open http://localhost:3000/`
 
+## How to start server
+Run:  
+`npm start`
+
 ## How to start code
 
 Run:  
-`npm run webpack-watch`
-
-## How to start server
-Run:  
-`npm run start`
+`npm run watch`
