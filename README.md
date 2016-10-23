@@ -1,4 +1,6 @@
-# Qi ERN Stack Starter Boilerplate (Express.js + React.js + Node.js)
+# RERN Starter Boilerplate (Express.js + React.js + Node.js + Rethinkdb)
+
+Rethinkdb part has not been added yet.
 
 ## Features
 
