@@ -1,4 +1,4 @@
-# Qi's React.js boilerplate
+# Qi React.js boilerplate
 
 ## Features
 
