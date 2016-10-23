@@ -6,10 +6,10 @@ import { render } from 'react-dom';
 import '../../app/css/style.css';
 
 // Components
-import Hello from '../../app/Hello';
+import route from '../../app/route';
 
 // Render
 render(
-  <Hello />,
+  route,
   document.getElementById('root')
 );
