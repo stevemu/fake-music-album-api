@@ -1,4 +1,4 @@
-# Qi React.js boilerplate
+# Qi ERN Stack Starter Boilerplate (Express.js + React.js + Node.js)
 
 ## Features
 
