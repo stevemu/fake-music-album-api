@@ -1,6 +1,4 @@
-# RERN Starter Boilerplate (Express.js + React.js + Node.js + Rethinkdb)
-
-Rethinkdb part has not been added yet.
+# ERN Starter Boilerplate (Express.js + React.js + Node.js)
 
 ## Features
 
