@@ -25,7 +25,9 @@ Check your http://localhost:3000/ or  `open http://localhost:3000/`
 Run:  
 `npm start`
 
-## How to start code
+## Deploy to production
 
-Run:  
-`npm run watch`
+```
+export NODE_ENV="production"
+node src/server/
+```
