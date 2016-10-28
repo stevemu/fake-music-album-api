@@ -19,7 +19,7 @@ npm install
 npm start
 ```
 
-Check your http://localhost:3000/ or  `open http://localhost:3000/`
+Check your http://localhost:3000/
 
 ## Deploy to production (ssh on a remote server)
 
