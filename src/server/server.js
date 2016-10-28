@@ -27,8 +27,8 @@ app.use(function(req, res, next) {
 });
 
 // webpack middle for hot reloading
-const config = require('../../config/webpack.js');
-const compiler = webpack(config);
+const webpackConfig = require('../../config/webpack.js');
+const compiler = webpack(webpackConfig);
 const middleware = webpackMiddleware(compiler, {
   publicPath: '/',
   contentBase: 'src/client/index.html',
