@@ -5,8 +5,7 @@
   "main": "src/server/index.js",
   "scripts": {
     "start": "nodemon src/server/index.js",
-    "build": "webpack --config config/webpack.js",
-    "watch": "webpack --config config/webpack.js --watch --colors"
+    "build": "webpack --config config/webpack.js"
   },
   "author": "Mu, Steve",
   "license": "MIT",
