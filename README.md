@@ -9,6 +9,7 @@
 * the server (with express.js) handles the browser history fall-back
 * use SASS
 * support hot reloading during development. For production, set env NODE_ENV="production" to disable hot reloading.
+* include a Procfile for deploying for Heroku, it will run the server automatically. It assumes the bundle.js is already in the repo. So don't gitignore the bundle.js file.
 
 ## How to start
 
