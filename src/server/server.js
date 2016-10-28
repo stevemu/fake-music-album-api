@@ -29,6 +29,7 @@ app.use(function(req, res, next) {
 // webpack middle for hot reloading during development
 const isDeveloping = process.env.NODE_ENV !== 'production';
 if (isDeveloping) {
+  console.log('dev setting - will use hot loader');
   const webpackConfig = require('../../config/webpack.js');
   const compiler = webpack(webpackConfig);
   const middleware = webpackMiddleware(compiler, {
@@ -45,6 +46,8 @@ if (isDeveloping) {
   });
   app.use(middleware);
   app.use(webpackHotMiddleware(compiler));
+} else {
+  console.log('production setting - will not use hot loader');
 }
 
 const PATH_DIST = path.resolve(__dirname, '../../dist');
