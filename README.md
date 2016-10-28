@@ -21,11 +21,20 @@ npm start
 
 Check your http://localhost:3000/ or  `open http://localhost:3000/`
 
-## Deploy to production
+## Deploy to production (ssh on a remote server)
 
 ```
 export NODE_ENV="production"
 npm install
 npm run build
-node src/server/
+npm start
 ```
+
+## Deploy to Heroku
+
+```
+npm run build
+git commit -am "update bundle.js"
+git push heroku master
+```
+
