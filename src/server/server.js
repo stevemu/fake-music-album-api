@@ -16,24 +16,25 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // Additional middleware which will set headers that we need on each request.
 app.use(function(req, res, next) {
-    // Set permissive CORS header - this allows this server to be used only as
-    // an API server in conjunction with something like webpack-dev-server.
-    res.setHeader('Access-Control-Allow-Origin', '*');
+  // Set permissive CORS header - this allows this server to be used only as
+  // an API server in conjunction with something like webpack-dev-server.
+  res.setHeader('Access-Control-Allow-Origin', '*');
 
-    // Disable caching so we'll always get the latest comments.
-    res.setHeader('Cache-Control', 'no-cache');
-    next();
+  // Disable caching so we'll always get the latest comments.
+  res.setHeader('Cache-Control', 'no-cache');
+  next();
 });
 
 
 // webpack middle for hot reloading during development
 const isDeveloping = process.env.NODE_ENV !== 'production';
 if (isDeveloping) {
+  console.log('dev setting - will use hot loader');
   const webpackConfig = require('../../config/webpack.js');
   const compiler = webpack(webpackConfig);
   const middleware = webpackMiddleware(compiler, {
     publicPath: '/',
-    contentBase: 'src/client/index.html',
+    contentBase: 'src/public/index.html',
     stats: {
       colors: true,
       hash: false,
@@ -45,15 +46,20 @@ if (isDeveloping) {
   });
   app.use(middleware);
   app.use(webpackHotMiddleware(compiler));
+} else {
+  console.log('production setting - will not use hot loader');
 }
 
-const PATH_DIST = path.resolve(__dirname, '../../dist');
-app.use(express.static(PATH_DIST));
+// const PATH_DIST = path.resolve(__dirname, '../../dist');
+// app.use(express.static(PATH_DIST));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../client/index.html'));
-});
-app.use(fallback(path.resolve(__dirname, '../client/index.html'))); // when requested route does not exist here in express app, return this file; for react.js route when using history.
+// app.get('/', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, '../client/index.html'));
+// });
+app.use('/', express.static(path.resolve(__dirname, '../public/')));
+
+
+app.use(fallback(path.resolve(__dirname, '../public/index.html'))); // when requested route does not exist here in express app, return this file; for react.js route when using history.
 
 server = app.listen(process.env.PORT || 3000, () => {
   var port = server.address().port;

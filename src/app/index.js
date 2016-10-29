@@ -3,10 +3,10 @@ import React from 'react';
 import { render } from 'react-dom';
 
 // CSS
-import '../../app/style/style.scss';
+import './style/style.scss';
 
 // Components
-import route from '../../app/route';
+import route from './route';
 
 // Render
 render(

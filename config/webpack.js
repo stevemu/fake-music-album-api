@@ -4,10 +4,10 @@ var webpack = require('webpack');
 module.exports = {
   entry: [
     'webpack-hot-middleware/client?reload=true',
-    path.resolve(__dirname, '../src/client/scripts/script.js')
+    path.resolve(__dirname, '../src/app/index.js')
   ],
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(__dirname, '../src/public/scripts'),
     filename: 'bundle.js'
   },
   plugins: [
@@ -23,8 +23,12 @@ module.exports = {
         loaders: ['react-hot', 'babel-loader']
       },
       {
-      test: /\.scss$/,
-      loader: 'style-loader!css-loader!sass-loader'
+        test: /\.scss$/,
+        loader: 'style-loader!css-loader!sass-loader'
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
       }
     ]
   }
