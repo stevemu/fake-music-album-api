@@ -19,8 +19,8 @@ npm run dev
 npm start
 ```
 
-in development, the node.js server will only serve backend APIs
-Check your http://localhost:3000/
+in development, the node.js server will only serve backend APIs. the webpack-dev-server serve the bundle.js html and handles hot-reloading and browser history api fallback - the front end.
+Check your http://localhost:8080/
 
 ## Deploy to production (ssh on a remote server)
 
@@ -32,6 +32,7 @@ npm start
 ```
 
 in production, the node.js server serve both the bundle.js and html
+Check your http://localhost:3000/
 
 ## Deploy to Heroku
 
