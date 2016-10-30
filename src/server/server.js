@@ -3,8 +3,6 @@ import express from 'express';
 import fallback from 'express-history-api-fallback'
 
 const webpack = require('webpack');
-const webpackMiddleware = require('webpack-dev-middleware');
-const webpackHotMiddleware = require('webpack-hot-middleware');
 
 var bodyParser = require('body-parser');
 
@@ -27,38 +25,18 @@ app.use(function(req, res, next) {
 
 
 // webpack middle for hot reloading during development
-const isDeveloping = process.env.NODE_ENV !== 'production';
-if (isDeveloping) {
-  console.log('dev setting - will use hot loader');
-  const webpackConfig = require('../../config/webpack.js');
-  const compiler = webpack(webpackConfig);
-  const middleware = webpackMiddleware(compiler, {
-    publicPath: '/',
-    contentBase: 'src/public/index.html',
-    stats: {
-      colors: true,
-      hash: false,
-      timings: true,
-      chunks: false,
-      chunkModules: false,
-      modules: false
-    }
-  });
-  app.use(middleware);
-  app.use(webpackHotMiddleware(compiler));
+const inProduction = process.env.NODE_ENV == 'production';
+if (inProduction) {
+  // under production, node serve the bundle.js (in development, webpack-dev-server serve the bundle.js)
+  console.log('in production, node will serve the bundle.js and html files');
+  const PATH_DIST = path.resolve(__dirname, '../../dist');
+  app.use(express.static(PATH_DIST));
 } else {
-  console.log('production setting - will not use hot loader');
+  console.log('in development, please make sure webpack dev server is running.');
 }
 
-// const PATH_DIST = path.resolve(__dirname, '../../dist');
-// app.use(express.static(PATH_DIST));
-
-// app.get('/', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, '../client/index.html'));
-// });
-app.use('/', express.static(path.resolve(__dirname, '../public/')));
-
-
+// serve html regardless whether the middleware is enabled or not
+app.use(express.static(path.resolve(__dirname, '../public/')));
 app.use(fallback(path.resolve(__dirname, '../public/index.html'))); // when requested route does not exist here in express app, return this file; for react.js route when using history.
 
 server = app.listen(process.env.PORT || 3000, () => {

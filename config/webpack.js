@@ -1,19 +1,16 @@
 var path = require('path');
-var webpack = require('webpack');
 
 module.exports = {
   entry: [
-    'webpack-hot-middleware/client?reload=true',
+
     path.resolve(__dirname, '../src/app/index.js')
   ],
   output: {
-    path: path.resolve(__dirname, '../src/public/scripts'),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, '../dist'),
+    filename: 'bundle.js',
+    publicPath: '/'
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
-  ],
+
 
   module: {
     loaders: [
@@ -33,3 +30,12 @@ module.exports = {
     ]
   }
 };
+
+// var webpack = require('webpack');
+
+// for hot reloading if webpack middleware is in node
+// 'webpack-hot-middleware/client?reload=false',
+//
+// plugins: [
+//   new webpack.HotModuleReplacementPlugin()
+// ],
