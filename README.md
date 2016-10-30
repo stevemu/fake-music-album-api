@@ -2,13 +2,12 @@
 
 ## Features
 
-* Node.js serve the index.html and bundled js
+* Node.js serve the index.html; webpack-dev-server serve the bundle.js in development; in production, the node.js server will serve the built bundle.js (please `npm run built` first)
 * css is bundled with webpack too
-* webpack watches new changes and compile the new bundle.js on-the-fly
+* webpack-dev-server with hot-reloading and history-api-fallback
+* the node.js server (with express.js) handles the browser history fall-back too
 * Use react-router
-* the server (with express.js) handles the browser history fall-back
 * use SASS
-* support hot reloading during development. For production, set env NODE_ENV="production" to disable hot reloading.
 * include a Procfile for deploying for Heroku, this tells Heroku how to start run the server. It assumes the bundle.js is already in the repo. So don't gitignore the bundle.js file.
 
 ## How to start developing
@@ -16,9 +15,11 @@
 make sure $NODE_ENV is not "production"
 ```
 npm install
+npm run dev
 npm start
 ```
 
+in development, the node.js server will only serve backend APIs
 Check your http://localhost:3000/
 
 ## Deploy to production (ssh on a remote server)
@@ -29,6 +30,8 @@ npm install
 npm run build
 npm start
 ```
+
+in production, the node.js server serve both the bundle.js and html
 
 ## Deploy to Heroku
 
