@@ -31,7 +31,7 @@ npm run build
 npm start
 ```
 
-in production, the node.js server serve both the bundle.js and html
+in production, the node.js server serves everthing (both the bundle.js and html)
 Check your http://localhost:3000/
 
 ## Deploy to Heroku
