@@ -1,4 +1,4 @@
-# Infinity web portal
+# my ern stack starter (react+express+node.js)
 
 ## Features
 
