@@ -1,47 +1,41 @@
-# ERN Starter Boilerplate (Express.js + React.js + Node.js)
+# Infinity web portal
 
 ## Features
 
-* Node.js serve the index.html; webpack-dev-server serve the bundle.js in development; in production, the node.js server will serve the built bundle.js (please `npm run built` first)
+* Node.js serve the index.html and bundled js
 * css is bundled with webpack too
-* webpack-dev-server with hot-reloading and history-api-fallback
-* the node.js server (with express.js) handles the browser history fall-back too
+* webpack watches new changes and compile the new bundle.js on-the-fly
 * Use react-router
+* the server (with express.js) handles the browser history fall-back
 * use SASS
-* include a Procfile for deploying for Heroku, this tells Heroku how to start run the server. It assumes the bundle.js is already in the repo. So don't gitignore the bundle.js file.
+* support hot reloading during development when using dev server.
+* backend port is specified in package.json via cross-env for easy change
+
+
+## Need Install global npm modules first
+
+```
+sudo npm install webpack -g
+sudo npm install cross-env -g
+```
 
 ## How to start developing
 
-make sure $NODE_ENV is not "production"
 ```
+export NODE_ENV="development" (or just not production)
 npm install
-npm run dev
-npm start
+npm run server
+npm run dev-server
 ```
 
-in development, the node.js server will only serve backend APIs. the webpack-dev-server serve the bundle.js html and handles hot-reloading and browser history api fallback - the front end.
-Check your `http://localhost:8080/` for front-end
-Backend is on `http://localhost:3000/` 
+Check your http://localhost:8080/
 
 ## Deploy to production (ssh on a remote server)
+
 
 ```
 export NODE_ENV="production"
 npm install
-npm run build
-npm start
+npm run build-prod
+npm run server
 ```
-
-in production, the node.js server serves everthing (both the bundle.js and html)
-Check your http://localhost:3000/
-
-## Deploy to Heroku
-
-```
-heroku login
-heroku create
-npm run build
-git commit -am "update bundle.js"
-git push heroku master
-```
-

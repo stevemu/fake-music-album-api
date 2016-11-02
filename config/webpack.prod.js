@@ -1,8 +1,9 @@
 var path = require('path');
+var webpack = require('webpack');
+
 
 module.exports = {
   entry: [
-
     path.resolve(__dirname, '../src/app/index.js')
   ],
   output: {
@@ -10,7 +11,12 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/'
   },
-
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env.SERVER_PORT': JSON.stringify(process.env.SERVER_PORT)
+    })
+  ],
 
   module: {
     loaders: [
