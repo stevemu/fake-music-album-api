@@ -2,13 +2,13 @@
 
 ## Features
 
-* Node.js serve the index.html and bundled js
-* css is bundled with webpack too
-* webpack watches new changes and compile the new bundle.js on-the-fly
-* Use react-router
-* the server (with express.js) handles the browser history fall-back
-* use SASS
+* Node.js serve the index.html and bundled.js in production
+* webpack-dev server watches new changes and compile the new bundle.js on-the-fly in development; in this case, the node.js server only serve API
 * support hot reloading during development when using dev server.
+* css is bundled with webpack
+* Use react-router
+* browser history fall-back
+* use SASS
 * backend port is specified in package.json via cross-env for easy change
 
 
