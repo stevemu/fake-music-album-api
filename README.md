@@ -22,7 +22,7 @@ sudo npm install cross-env -g
 ## How to start developing
 
 ```
-export NODE_ENV="development" (or just not production)
+export NODE_ENV=development (or just not "production")
 npm install
 npm run server
 npm run dev-server
@@ -32,6 +32,7 @@ Check your http://localhost:8080/
 
 ## Deploy to production (ssh on a remote server)
 
+to change the port, go to package.json and change 3000 to the port you desired
 
 ```
 export NODE_ENV="production"
@@ -39,3 +40,5 @@ npm install
 npm run build-prod
 npm run server
 ```
+
+Check your http://${server}:3000/
