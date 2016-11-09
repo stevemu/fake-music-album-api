@@ -7,6 +7,8 @@ module.exports = {
     'whatwg-fetch',
     path.resolve(__dirname, '../src/app/index.js')
   ],
+  devtool: 'cheap-module-eval-source-map',
+
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js',
@@ -16,7 +18,9 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development'),
       'process.env.SERVER_PORT': JSON.stringify(process.env.SERVER_PORT)
-    })
+    }),
+    new webpack.optimize.OccurrenceOrderPlugin()
+
   ],
 
   module: {
@@ -24,7 +28,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['react-hot', 'babel-loader?presets[]=es2015,presets[]=react,plugins[]=transform-runtime,plugins[]=transform-object-rest-spread']
+        loaders: ['react-hot', 'babel-loader?presets[]=es2015,presets[]=react,presets[]=stage-1,plugins[]=transform-runtime,plugins[]=transform-object-rest-spread']
       },
       {
         test: /\.scss$/,

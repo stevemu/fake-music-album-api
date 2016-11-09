@@ -24,7 +24,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['react-hot', 'babel-loader?presets[]=es2015,presets[]=react,plugins[]=transform-runtime,plugins[]=transform-object-rest-spread']
+        loaders: ['react-hot', 'babel-loader?presets[]=es2015,presets[]=react,presets[]=stage-1,plugins[]=transform-runtime,plugins[]=transform-object-rest-spread']
       },
       {
         test: /\.scss$/,
