@@ -6,7 +6,8 @@
   "scripts": {
     "server": "cross-env PORT=2000 nodemon src/server/index.js",
     "build-prod": "cross-env SERVER_PORT=2000 webpack --config config/webpack.prod.js",
-    "dev-server": "cross-env SERVER_PORT=2000 webpack-dev-server --content-base src/public --config config/webpack.dev.js --inline --hot --history-api-fallback"
+    "dev-server": "cross-env SERVER_PORT=2000 webpack-dev-server --content-base src/public --config config/webpack.dev.js --inline --hot --history-api-fallback",
+    "test": "mocha './src/**/*.spec.js' --compilers js:babel-core/register"
   },
   "author": "Mu, Steve",
   "license": "MIT",
@@ -39,9 +40,13 @@
     "webpack-dev-middleware": "^1.8.4",
     "webpack-dev-server": "^1.14.1",
     "webpack-hot-middleware": "^2.13.0",
+    "webpack-preset": "^0.2.0",
+    "webpack-preset-babel": "^0.2.0",
+    "webpack-preset-babel-stage-1": "^0.2.0",
     "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
-    "bootstrap-css": "^3.0.0"
+    "bootstrap-css": "^3.0.0",
+    "chair": "0.0.0"
   }
 }
