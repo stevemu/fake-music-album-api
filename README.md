@@ -37,7 +37,6 @@ to change the port, go to package.json and change 3000 to the port you desired
 
 ```
 export NODE_ENV="production" 
-or source prod_env_var
 npm install
 npm run build-prod
 npm run server
