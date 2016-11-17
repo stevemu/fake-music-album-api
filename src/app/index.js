@@ -13,5 +13,3 @@ render(
   route,
   document.getElementById('root')
 );
-
-console.log(aaa);
