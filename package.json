@@ -59,6 +59,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-preset-stage-2": "^6.18.0",
     "bootstrap-css": "^3.0.0",
+    "chai": "^3.5.0",
     "chair": "0.0.0",
     "react-transform-hmr": "^1.0.4"
   }
