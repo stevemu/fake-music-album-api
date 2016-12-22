@@ -1,6 +1,6 @@
 import path from 'path';
 import express from 'express';
-var https = require('https');
+import https from 'https';
 import fallback from 'express-history-api-fallback'
 const webpack = require('webpack');
 var bodyParser = require('body-parser');
