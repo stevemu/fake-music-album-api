@@ -1,16 +1,6 @@
-# my ern stack starter (react+express+node.js)
+# fake album api
 
-## Features
-
-* Node.js serve the index.html and bundled.js in production
-* webpack-dev server watches new changes and compile the new bundle.js on-the-fly in development; in this case, the node.js server only serve API
-* support hot reloading during development when using dev server.
-* css is bundled with webpack
-* Use react-router
-* browser history fall-back
-* use SASS
-* backend port is specified in package.json via cross-env for easy change
-* whether the envrionment is production is specified at envrionment variable NODE_ENV=production||or_other
+public url: http://stevemu.com:6000/api/music_albums
 
 
 ## Need Install global npm modules first
