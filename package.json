@@ -52,16 +52,16 @@
     "webpack-preset": "^0.2.0",
     "webpack-preset-babel": "^0.2.0",
     "webpack-preset-babel-stage-1": "^0.2.0",
-    "whatwg-fetch": "^1.0.0"
-  },
-  "devDependencies": {
+    "whatwg-fetch": "^1.0.0",
     "babel-plugin-react-transform": "^2.0.2",
     "babel-preset-stage-0": "^6.5.0",
     "babel-preset-stage-1": "^6.16.0",
     "babel-preset-stage-2": "^6.18.0",
+    "react-transform-hmr": "^1.0.4"
+  },
+  "devDependencies": {
     "bootstrap-css": "^3.0.0",
     "chai": "^3.5.0",
-    "react-transform-hmr": "^1.0.4",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.3.1"
   }
